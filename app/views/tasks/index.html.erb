@@ -1,0 +1,10 @@
+<div class="container-fluid mt-3">
+  <h1>My tasks</h1>
+    <% @tasks.each do |task| %>
+      <div class="d-flex justify-content-start">
+        <i class="far fa-square p-3"></i>
+        <p><%= link_to task.title, task_path(task) %></p>
+      </div>
+    <% end %>
+    <p><%= link_to " Add new task", new_task_path(@task) %></p>
+</div>
